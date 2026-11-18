@@ -14,11 +14,11 @@ jobs:
     steps:
       # 步驟一：把你的專案程式碼下載到這台虛擬機裡面
       - name: 取得專案程式碼 (Checkout)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # 步驟二：在虛擬機裡面安裝 Python 環境
       - name: 安裝 Python 環境
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11' # 可依你專案需求調整版本，例如 '3.10' 或 '3.12'
 
