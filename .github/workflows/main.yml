@@ -39,3 +39,11 @@ jobs:
           
           # 3. 檢查 import 排序（加上 --check-only 代表「只檢查不自動修改」，不符規定就報錯）
           isort --check-only .
+
+      # 步驟五： 執行 Gemini AI 程式碼審查
+      - name: 執行 Gemini AI 程式碼審查
+        env:
+          # 從 GitHub Secrets 讀取金鑰注入環境變數
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python ai_review.py
