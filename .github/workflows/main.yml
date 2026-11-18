@@ -1,5 +1,8 @@
 on: [push, pull_request]
 
+permissions:
+  contents: write
+
 jobs:
   python-lint:
     # runs-on: ubuntu-latest
